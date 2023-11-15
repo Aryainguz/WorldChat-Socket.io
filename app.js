@@ -44,4 +44,6 @@ app.get('/', (req, res) => {
     res.render('index')
  })          
 
-server.listen(3000, () => console.log('Server is running...'))
+const port = process.env.PORT || 3000
+
+server.listen( port , () => console.log('Server is running...'))
