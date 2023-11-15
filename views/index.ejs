@@ -160,6 +160,7 @@
                     appendMessage({ name: name, message: message });
                 }
                 document.querySelector('input').value = '';
+                document.getElementById('message').value = '';
             }
 
             socket.on("receive-message", (data) => {
