@@ -1,5 +1,5 @@
 {
-    "name": "DevLance",
+    "name": "World-Chat",
     "builds": [
        { "src": "app.js", "use": "@vercel/node" }
     ],
