@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World-Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="padding: 0px;margin: 0px;display: none;" onload="connect()">
+
+    <div class="bg-gray-900 text-gray-100 w-full p-4 block sm:hidden">
+        <div class="flex items-center mb-4">
+          <svg
+            class="w-8 h-8 mr-2"
+            viewBox="0 0 16 16"
+            version="1.1"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              fill="#fff"
+              d="M8 .25a7.75 7.75 0 1 0 0 15.5A7.75 7.75 0 0 0 8 .25zm0 1.5a6.25 6.25 0 1 1 0 12.5A6.25 6.25 0 0 1 8 1.75z"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              d="M8 2.5a5.25 5.25 0 1 0 0 10.5A5.25 5.25 0 0 0 8 2.5zm0 1.5a3.75 3.75 0 1 1 0 7.5A3.75 3.75 0 0 1 8 4z"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              d="M8 5.5a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5zm0 1.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z"
+            ></path>
+          </svg>
+          <span class="text-2xl font-semibold">World-Chat</span>
+        </div>
+      </div>
+
+    <div class="flex h-screen overflow-y-auto">
+        <div class="bg-gray-900 text-gray-100 flex-none w-64 p-4 hidden sm:block">
+            <div class="flex items-center mb-8">
+              <svg
+                class="w-8 h-8 mr-2"
+                viewBox="0 0 16 16"
+                version="1.1"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  fill="#fff"
+                  d="M8 .25a7.75 7.75 0 1 0 0 15.5A7.75 7.75 0 0 0 8 .25zm0 1.5a6.25 6.25 0 1 1 0 12.5A6.25 6.25 0 0 1 8 1.75z"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  d="M8 2.5a5.25 5.25 0 1 0 0 10.5A5.25 5.25 0 0 0 8 2.5zm0 1.5a3.75 3.75 0 1 1 0 7.5A3.75 3.75 0 0 1 8 4z"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  d="M8 5.5a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5zm0 1.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z"
+                ></path>
+              </svg>
+              <span class="text-2xl font-semibold">World-Chat</span>
+            </div>
+          </div>
+
+
+          <!-- Chat -->
+          <div class="flex-1 flex flex-col">
+            <!-- Header -->
+            <div class="bg-white border-b border-gray-200 flex-none p-4">
+              <div class="flex items-center">
+                <svg
+                  class="w-8 h-8 mr-2 text-gray-400"
+                  viewBox="0 0 16 16"
+                  version="1.1"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    fill="#fff"
+                    d="M8 1.5a6.5 6.5 0 0 0-6.5 6.5c0 3.59 2.91 6.5 6.5 6.5s6.5-2.91 6.5-6.5A6.5 6.5 0 0 0 8 1.5zm0 1.5a5 5 0 0 1 5 5c0 2.76-2.24 5-5 5s-5-2.24-5-5a5 5 0 0 1 5-5zm0 1.5a3.5 3.5 0 0 0-3.5 3.5c0 1.93 1.57 3.5 3.5 3.5s3.5-1.57 3.5-3.5a3.5 3.5 0 0 0-3.5-3.5z"
+                  ></path>
+                </svg>
+                
+              </div>
+              <div class="flex items-center">
+                <span class="text-sm text-white bg-violet-600 p-2">A World's Chat App</span>
+              </div>
+            </div>
+            <!-- Messages -->
+            <div class="flex-1 p-4 overflow-y-scroll">
+              <div class="flex items-start mb-4">
+                <div
+                  class="w-10 h-10 rounded-full mr-2 bg-blue-400">
+                  </div>
+                <div class="flex-1">
+                  <div class="flex items-center mb-2">
+                    <span class="text-gray-800 font-medium mr-2">Aryan</span>
+                    <span class="text-gray-400 text-sm">10:05 AM</span>
+                  </div>
+                  <div class="bg-gray-200 rounded-lg p-2">
+                    <p class="text-gray-800">
+                      Hi, I have a question about the latest commit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start mb-4">
+                <div
+                  class="w-10 h-10 rounded-full mr-2 bg-purple-400"
+                >
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center mb-2">
+                    <span class="text-gray-800 font-medium mr-2">Harry</span>
+                    <span class="text-gray-400 text-sm">10:10 AM</span>
+                  </div>
+                  <div class="bg-gray-200 rounded-lg p-2">
+                    <p class="text-gray-800">
+                      Sure, what do you need help with?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+    <!-- Footer -->
+    <div class="bg-gray-900 text-white p-6">
+      <div class="flex items-center">
+        <input
+          id="message"
+          class="bg-gray-700 text-white rounded-lg w-full px-3 py-2 focus:outline-none focus:shadow-outline"
+          type="text" placeholder="Type your message here" />
+        <button class="bg-blue-500 hover:bg-blue-600 ml-4 px-4 py-2 rounded-lg focus:outline-none focus:shadow-outline">
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+<script>
+    const socket = io('http://localhost:3000'); 
+
+    const connect = ()=>{
+        const name = prompt("Enter your name to join!");
+        if(name){
+            document.querySelector('body').style.display = 'block';
+            socket.emit('connection',name);
+        }
+        else{
+            location.reload();
+        }
+    } 
+    const audio = new Audio('./telegram_chat.mp3');
+    const messageHandler = ()=>{
+        const message = document.querySelector('input').value;
+        if(message){
+            socket.emit('message-input',message);   
+            audio.play();
+        }
+    }
+    socket.on("message-out",(data)=>{
+        
+    })
+
+</script>
+</body>
+</html>

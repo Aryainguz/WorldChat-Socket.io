@@ -12,7 +12,7 @@ app.use(cors({
 // In socket.io applications we can not directly use app.listen because socket io need to be wrapped in http server so we use http.createServer(app) to wrap our app in http server and also connect socket io to http server
 const server = http.createServer(app)
 
-// Socket.io confgiration with our express server
+// socket.io confgiration with our express server
 const io = new Server(server,{
     cors: {
         origin: '*'
